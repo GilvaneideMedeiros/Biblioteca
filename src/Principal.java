@@ -28,7 +28,6 @@ public class Principal extends Livro {
             Gson gson = new Gson(); //utilizando o Gson
             Principal dados = gson.fromJson(resposta.body(), Principal.class);
 
-            RespostaDados dadosAPI = gson.fromJson(resposta.body(), RespostaDados.class);
             if (dados.getItems() != null && !dados.getItems().isEmpty()) {
                 VolumeInfo volumeInfo = dados.getItems().get(0).volumeInfo;
 
